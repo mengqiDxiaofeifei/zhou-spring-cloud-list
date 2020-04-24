@@ -1,0 +1,35 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: redis-lock
+  datasource:
+    url: jdbc:mysql://111.229.237.223:3306/lock-test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+    cache:
+      host: 127.0.0.1
+      database: 0
+      port: 6379
+      expire: 1800
+      timeout: 0
+    redisson:
+      address: redis://127.0.0.1:6379
+#zookeeper 配置
+#zk:
+#  connectAddr: 192.168.91.139:2181,192.168.91.140:2181,192.168.91.141:2181
+mapper:
+  mappers: com.zhou.redis.core.MyMapper
+  not-empty: false
+  identity: MYSQL
+logging:
+  level:
+    root: info
