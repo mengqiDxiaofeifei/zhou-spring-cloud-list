@@ -8,11 +8,23 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-#zookeeper 配置
-#zk:
-#  connectAddr: 192.168.91.139:2181,192.168.91.140:2181,192.168.91.141:2181
+  redis:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+    cache:
+      host: 127.0.0.1
+      database: 0
+      port: 6379
+      expire: 1800
+      timeout: 0
+  redisson:
+    address: redis://127.0.0.1:6379
 mapper:
-  mappers: zhou.zookeeper.core.MyMapper
+  mappers: com.zhou.core.MyMapper
   not-empty: false
   identity: MYSQL
 logging:

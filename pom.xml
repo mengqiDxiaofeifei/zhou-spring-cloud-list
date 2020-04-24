@@ -2,21 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>distributed-lock</artifactId>
-        <groupId>com.zhou</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zhou-cloud-springboot</artifactId>
+    <groupId>com.zhou</groupId>
+    <artifactId>distributed-lock</artifactId>
     <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>zhou-springboot-lock</module>
+        <module>zhou-cloud-springboot</module>
     </modules>
-
-
-
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.3.RELEASE</version>
+        <relativePath/>
+    </parent>
 
 </project>
