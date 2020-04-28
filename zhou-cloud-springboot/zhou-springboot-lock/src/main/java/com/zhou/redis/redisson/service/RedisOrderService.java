@@ -1,4 +1,4 @@
-package com.zhou.redis.service;
+package com.zhou.redis.redisson.service;
 
 public interface RedisOrderService {
     /**

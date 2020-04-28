@@ -1,7 +1,7 @@
-package com.zhou.redis.controller;
+package com.zhou.redis.setnx.controller;
 
 
-import com.zhou.redis.service.RedisOrderService;
+import com.zhou.redis.setnx.service.impl.RedisLockServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,12 +12,12 @@ import java.util.concurrent.CyclicBarrier;
 
 @RestController
 @Slf4j
-@RequestMapping("/redis")
-public class RedisOrderController {
+@RequestMapping("/redisNx")
+public class RedisSetnxOrderController {
 
 
     @Autowired
-    private RedisOrderService orderService;
+    private RedisLockServiceImpl orderService;
 
     /**
      * 模拟高并发场景，多线程，并发下单

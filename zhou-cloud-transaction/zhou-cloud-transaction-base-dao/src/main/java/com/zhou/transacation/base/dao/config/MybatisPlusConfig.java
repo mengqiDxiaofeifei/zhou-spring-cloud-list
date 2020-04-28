@@ -1,0 +1,26 @@
+package com.zhou.transacation.base.dao.config;
+
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @description MybatisPlusConfig
+ * @author zhouhoujun
+ * @date '2020-03-22'
+ */
+@Configuration
+@MapperScan(value = "com.zhou.transacation.base.dao.mapper")
+public class MybatisPlusConfig {
+    /**
+     * 分页插件
+     *
+     * @return PaginationInterceptor
+     */
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
+    }
+
+}

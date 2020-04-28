@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zhou-cloud-common" />
+        <module name="zhou-cloud-transaction-base-dao" />
+        <module name="zhou-cloud-transaction-lcn-lcn-order" />
+        <module name="zhou-cloud-transaction-lcn-lcn-send" />
+        <module name="zhou-springboot-lock" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zhou-cloud-common" target="1.5" />
+      <module name="zhou-cloud-springboot" target="1.8" />
+      <module name="zhou-cloud-transaction" target="1.8" />
+      <module name="zhou-cloud-transaction-base-dao" target="1.8" />
+      <module name="zhou-cloud-transaction-lcn" target="1.8" />
+      <module name="zhou-cloud-transaction-lcn-lcn" target="1.8" />
+      <module name="zhou-cloud-transaction-lcn-lcn-order" target="1.8" />
+      <module name="zhou-cloud-transaction-lcn-lcn-send" target="1.8" />
+      <module name="zhou-spring-cloud-list" target="1.8" />
+      <module name="zhou-springboot-lock" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

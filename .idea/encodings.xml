@@ -2,9 +2,13 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/redis-lock" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhou-cloud-springboot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhou-cloud-springboot/zhou-springboot-lock" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/zookeeper-lock" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction/zhou-cloud-transaction-base-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction/zhou-cloud-transaction-lcn" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction/zhou-cloud-transaction-lcn/zhou-cloud-transaction-lcn-lcn" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction/zhou-cloud-transaction-lcn/zhou-cloud-transaction-lcn-lcn/zhou-cloud-transaction-lcn-lcn-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhou-cloud-transaction/zhou-cloud-transaction-lcn/zhou-cloud-transaction-lcn-lcn/zhou-cloud-transaction-lcn-lcn-send" charset="UTF-8" />
   </component>
 </project>

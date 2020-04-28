@@ -1,7 +1,7 @@
-package com.zhou.zookeeper.controller;
+package com.zhou.redis.test.controller;
 
 
-import com.zhou.zookeeper.service.OrderService;
+import com.zhou.redis.setnx.service.impl.RedisLockServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,16 +12,15 @@ import java.util.concurrent.CyclicBarrier;
 
 @RestController
 @Slf4j
-@RequestMapping("/zookeeper")
-public class OrderController {
+@RequestMapping("/test")
+public class RedisSetnxOrderControllerTest {
 
 
     @Autowired
-    private OrderService orderService;
+    private RedisLockServiceImpl orderService;
 
     /**
      * 模拟高并发场景，多线程，并发下单
-     * （模拟多个用户同时访问）
      *
      * @return
      */
@@ -53,13 +52,15 @@ public class OrderController {
 
 
     /**
-     * 单个用户请求接口（推荐压测工具jmeter）
+     * Jmeter测试工具 进行压测
      *
      * @return
      */
     @RequestMapping("/order")
-    public String createOrdert() {
+    public String createOrder() {
+
         //创建订单
         return orderService.createOrder();
+
     }
 }

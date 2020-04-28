@@ -1,14 +1,14 @@
-package com.zhou.redis.service.impl;
+package com.zhou.redis.redisson.service.impl;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.zhou.component.OrderNumGenerator;
 import com.zhou.constant.RedisConstant;
 import com.zhou.dao.OrderDao;
 import com.zhou.entity.Order;
-import com.zhou.redis.service.RedisOrderService;
+import com.zhou.redis.redisson.service.RedisOrderService;
 import com.zhou.utils.RedissonUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -25,9 +25,9 @@ public class RedisOrderServiceImpl implements RedisOrderService {
 
     @Override
     public String createOrder() {
-
         try {
-            boolean b = RedissonUtil.tryLock(RedisConstant.OrderLockConstant.ORDER_LOCK_KEY
+            //最多等待3秒，20秒后自动解锁
+            RedissonUtil.tryLock(RedisConstant.OrderLockConstant.ORDER_LOCK_KEY
                     , TimeUnit.SECONDS, 3, 20);
 
             String orderNumber = codeGenerator.getOrderNumber();
